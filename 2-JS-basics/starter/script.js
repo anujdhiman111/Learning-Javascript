@@ -251,3 +251,96 @@ else if (MaryTeamAverageScore > JohnTeamAverageScore && MaryTeamAverageScore > M
 else {
 	console.log('There is a draw');
 }
+
+// Function
+  //Function declaration
+function calculateAge(birthyear) {
+  return 2018-birthyear;
+}
+
+var agejohn = calculateAge(1990);
+var agemike = calculateAge(1980);
+var agemary = calculateAge(1986);
+var agejane = calculateAge(1984);
+console.log(agejohn, agejane, agemary, agemike);
+
+function yearUntilRetirement(year, firstname) {
+	var age = calculateAge(year);
+	var retirement = 65 - age;
+	if(retirement >0){
+	console.log(firstname + ' retires in ' + retirement +' years');
+  }
+  else{
+  	console.log(firstname + ' is retired.');
+  }
+}
+yearUntilRetirement(1990, 'John');
+yearUntilRetirement(1949, 'Mike');
+yearUntilRetirement(1968, 'Mary');
+yearUntilRetirement(1978, 'Jane');
+
+// Function experession 
+var WhatDoUDo = function(job, firstname) {
+	switch(job){
+		case 'teacher':
+		return firstname + ' teaches kids';
+		case 'constructor':
+		return firstname + ' construct buildings';
+		case 'designer':
+		return firstname + ' design websites';
+		default:
+		return firstname + ' do nothing';
+	}
+}
+console.log(WhatDoUDo ('teacher', 'john'));
+console.log(WhatDoUDo ('designer', 'jane'));
+console.log(WhatDoUDo ('builder', 'mark'));
+
+// Arrays
+var names = ['john', 'mark', 'jane'];
+var years = new Array(1990, 1968, 1980);
+console.log(names[2]);
+console.log(names.length);
+
+//Mutate array data
+names[2] = 'ben';
+names[names.length] = 'mary';
+console.log(names);
+
+// Differnt data types 
+var john = ['john', 'smith', 1990, 'teacher', 'false'];
+
+john.push('blue');
+john.unshift('anuj');
+console.log(john);
+
+john.pop();
+john.shift();
+console.log(john);
+
+console.log(john.indexOf('teacher'));
+
+var johnDesigner = john.indexOf('designer') === -1 ? 'john is not a designer': 'john is a designer';
+console.log(johnDesigner);
+
+//Coding Challenge 3
+function tipCalculator(bill) {
+	var percentage;
+	if(bill < 50) {
+		percentage = 0.2;
+	}
+	else if(bill >= 50 && bill < 200) {
+        percentage = 0.15;
+	}
+	else {
+		percentage = 0.1;
+	}
+	return percentage*bill;
+}
+
+var bills = [124, 48, 268];
+var tips = [tipCalculator(bills[0]), tipCalculator(bills[1]), tipCalculator(bills[2])];
+var finalBills = [bills[0] + tips[0], bills[1] + tips[1],
+                 bills[2] + tips[2]];
+
+console.log(tips, finalBills);
