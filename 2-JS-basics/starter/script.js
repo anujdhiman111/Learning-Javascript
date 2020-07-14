@@ -344,3 +344,90 @@ var finalBills = [bills[0] + tips[0], bills[1] + tips[1],
                  bills[2] + tips[2]];
 
 console.log(tips, finalBills);
+
+//Object and Properties
+
+//Object literals
+var john = {
+	firstname: 'john',
+	lastname: 'smith',
+	job: 'teacher',
+	family: ['jane ','mark ','mery'],
+	ismarried: 'false'
+};
+console.log(john);
+console.log(john.firstname);
+console.log(john['lastname']);
+
+john.job = 'designer';
+john['ismarried'] = true;
+console.log(john);
+
+//New object syntax
+var jane = new Object();
+jane.firstname = 'jane';
+jane.lastname = 'smith';
+jane.birthyear = 1990;
+jane.ismarried = false;
+console.log (jane);
+jane.lastname = 'janes';
+jane.birthyear = 1996;
+console.log(jane);
+
+
+//Objects and methods
+var john = {
+	firstname: 'john',
+	lastname: 'smith',
+	job: 'teacher',
+	family: ['jane ','mark ','mery'],
+	ismarried: 'false',
+	birthyear:1994,
+	calcAge: function() {
+		this.age = 2018-this.birthyear;
+	}
+};
+john.calcAge();
+console.log(john);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
